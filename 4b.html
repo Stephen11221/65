@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        form{
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            margin-left: 300px;
+            border: 1px solid gray;
+            width: 50%;
+            padding: 10px 12px ;
+        }
+        .header-form{
+            text-align: center;
+            color: brown;
+        }
+        .col-lg{
+            margin-top: 20px;
+        }
+        .send-order{
+            background: green;
+            padding: 15px 15px;
+            border: none;
+            color: aliceblue;
+        }
+        .del{
+            border: none;
+            color: white;
+            padding: 15px 15px;
+            background: red        }
+    </style>
+</head>
+<body>
+    <h2 class="header-form">Customer Information</h2>
+    <form action="">
+        <div class="col-lg">
+            <label for="">Name</label> <br>
+            <input type="text" name="" id="">
+        </div>
+        <div class="col-lg">
+            <label for="">Adress</label> <br>
+            <input type="text" name="" id="">
+        </div>
+        <div class="col-lg">
+            <label for=""> Postcode</label> <br>
+            <input type="text">
+        </div>
+        <div class="col-lg">
+            <label for="">Telephone number</label> <br>
+            <label for="">Cash</label>
+            <input type="radio" name="" aria-checked="true" id=""> 
+            <label for="">Credit Card</label>
+            <input type="radio" name="" id="">
+            <label for="">Payment</label>
+            <input type="radio" id="payment">
+        </div>
+        <div class="col-lg">
+            <label for="">Order</label><br>
+            <textarea name="" id="" cols="30" rows="10"></textarea>
+        </div>
+        <div class="col-lg">
+
+            <label for="">Newslatter</label>
+            <p><input type="checkbox">I would like to receive Gardenland's Newslatter</p>
+        </div>
+        <div class="col-lg">
+            <button class="send-order" onclick="myFunction()">Send</button> <br> <br>
+            <button class="del" onclick="delInfo()">Delete Details</button>
+        </div> <br>
+        <p id="del"></p>
+    </form>
+    <script>
+        function myFunction(){
+            alert("Thank for your order?")
+        }
+        function  delInfo(){
+            var txt;
+            if (confirm("press a button"))
+            {
+                txt="You press ok!";
+            }
+            else{
+                txt="you press cancel!"
+            }
+        
+            document.getElementById("del").innerHTML = txt;
+        }
+    </script>
+</body>
+</html>
